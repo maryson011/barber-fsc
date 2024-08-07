@@ -43,3 +43,5 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 > npx prisma format
 > npx prisma migrate dev --name add_initial_tables
 > npx prisma studio
+> npm intall -D ts-node
+> npx prisma db seed
