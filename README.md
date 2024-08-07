@@ -45,3 +45,6 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 > npx prisma studio
 > npm intall -D ts-node
 > npx prisma db seed
+
+https://ui.shadcn.com/
+> npx shadcn-ui@latest init
