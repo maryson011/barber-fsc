@@ -57,3 +57,6 @@ https://ui.shadcn.com/
 
 https://date-fns.org/
 > npm i date-fns
+
+
+https://uploadthing.com/ -> armazenar imagens (estudar essa solução)
