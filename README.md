@@ -48,3 +48,6 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 https://ui.shadcn.com/
 > npx shadcn-ui@latest init
+
+> npx shadcn-ui@latest add card
+> npx shadcn-ui@latest add button
