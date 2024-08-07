@@ -51,6 +51,7 @@ https://ui.shadcn.com/
 
 > npx shadcn-ui@latest add card
 > npx shadcn-ui@latest add button
+> npx shadcn-ui@latest add input
 
 https://date-fns.org/
 > npm i date-fns
