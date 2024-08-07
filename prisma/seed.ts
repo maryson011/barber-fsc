@@ -2,6 +2,16 @@ const { PrismaClient } = require("@prisma/client");
 
 const prisma = new PrismaClient();
 
+async function clearDatabase() {
+  try {
+    await prisma.service.deleteMany({});
+    await prisma.barbershop.deleteMany({});
+    console.log("Dados existentes deletados.");
+  } catch (error) {
+    console.error("Erro ao deletar dados existentes:", error);
+  }
+}
+
 async function seedDatabase() {
   try {
     const images = [
@@ -136,3 +146,4 @@ async function seedDatabase() {
 }
 
 seedDatabase();
+// clearDatabase()
