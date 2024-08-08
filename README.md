@@ -62,4 +62,4 @@ https://date-fns.org/
 https://uploadthing.com/ -> armazenar imagens (estudar essa solução)
 
 
-> npx prisma migrate dev --name add_service_image_url
+> npx prisma migrate dev --create-only --name add_service_image_url
