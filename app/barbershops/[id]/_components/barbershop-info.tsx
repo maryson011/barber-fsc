@@ -16,7 +16,7 @@ const BarbershopInfo = ({ barbershop }: BarbershopInfoProps) => {
     const router = useRouter()
 
     const handleBackClick = () => {
-        router.back()
+        router.replace('/')
     }
 
     return (
@@ -25,14 +25,12 @@ const BarbershopInfo = ({ barbershop }: BarbershopInfoProps) => {
                 <Button onClick={handleBackClick} size="icon" variant="outline" className="z-50 absolute top-4 left-4">
                     <ChevronLeftIcon />
                 </Button>
-                <Button size="icon" variant="outline" className="z-50 absolute top-4 right-4">
-                    <MenuIcon />
-                </Button>
+                
 
                 <Sheet>
                     <SheetTrigger asChild>
-                        <Button variant="outline" size="icon">
-                            <MenuIcon size={16}/> 
+                        <Button size="icon" variant="outline" className="z-50 absolute top-4 right-4">
+                            <MenuIcon />
                         </Button>
                     </SheetTrigger>
 
