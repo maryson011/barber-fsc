@@ -63,3 +63,18 @@ https://uploadthing.com/ -> armazenar imagens (estudar essa solução)
 
 
 > npx prisma migrate dev --create-only --name add_service_image_url
+
+
+https://next-auth.js.org/
+> npm install next-auth
+https://next-auth.js.org/configuration/initialization
+    - /api/auth/[...nextauth]/route.ts
+Provider:
+    ...
+
+Adpters:
+https://authjs.dev/getting-started/adapters/prisma?_gl=1*ti3lqw*_gcl_au*ODg4NDE5ODk0LjE3MjMxMzA0OTA.
+> npm install @auth/prisma-adapter
+
+> npx prisma format
+
