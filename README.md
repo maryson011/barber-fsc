@@ -79,3 +79,6 @@ https://authjs.dev/getting-started/adapters/prisma?_gl=1*ti3lqw*_gcl_au*ODg4NDE5
 > npx prisma format
 
 > npx shadcn-ui@latest add sheet
+> npx shadcn-ui@latest add calendar
+
+https://daypicker.dev/
