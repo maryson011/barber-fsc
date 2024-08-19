@@ -105,7 +105,7 @@ const ServiceItem = ({ service, barbershop, isAuthenticated }: ServiceItemProps)
     if (!date) {
       return []
     }
-    // TODO adicionar a lógica para filtar os hórarios também por barbearia
+    
     return generateDayTimeList(date).filter(time => {
       const timeHour = Number(time.split(":")[0])
       const timeMinutes = Number(time.split(":")[1])
