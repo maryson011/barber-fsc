@@ -45,11 +45,12 @@ export default async function Home() {
   ])
 
   return (
+        // TODO corrigir user name da sessão para deslogado
     <div>
       <Header />
 
       <div className="px-5 pt-5">
-        <h2 className="text-xl font-bold">Olá, Maryson!</h2>
+        <h2 className="text-xl font-bold">{`Olá, ${session?.user?.name}`}</h2>
         <p className="capitalize text-sm">
           {format(new Date(), "EEEE',' dd 'de' MMMM", {
             locale: ptBR,
@@ -61,14 +62,17 @@ export default async function Home() {
         <Search />
       </div>
 
-      <div className="mt-5">
-        <h2 className="pl-5 text-xs mb-3 uppercase text-gray-400 font-bold">
-          Agendamentos
-        </h2>
-        <div className="px-5 flex gap-3 overflow-x-auto [&::-webkit-scrollbar]:hidden">
-          {confimedBookings.map((booking) => (<BookingItem key={booking.id} booking={booking}/>))}
-        </div>
-        
+      <div className="mt-6">
+        {confimedBookings.length > 0 && (
+          <>
+            <h2 className="pl-5 text-xs mb-3 uppercase text-gray-400 font-bold">
+              Agendamentos
+            </h2>
+            <div className="px-5 flex gap-3 overflow-x-auto [&::-webkit-scrollbar]:hidden">
+              {confimedBookings.map((booking) => (<BookingItem key={booking.id} booking={booking}/>))}
+            </div>
+          </>
+        )}
       </div>
 
       <div className="mt-6">
