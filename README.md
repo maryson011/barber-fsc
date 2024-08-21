@@ -89,3 +89,4 @@ https://daypicker.dev/
 
 > npx prisma db push
 > npx prisma db seed
+> npx shadcn-ui@latest add form
