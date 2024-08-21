@@ -86,3 +86,6 @@ https://daypicker.dev/
 > npx shadcn-ui@latest add sonner
 
 > npx shadcn-ui@latest add alert-dialog
+
+> npx prisma db push
+> npx prisma db seed

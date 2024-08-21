@@ -5,7 +5,7 @@ import { Card, CardContent } from "@/app/_components/ui/card";
 import { Sheet, SheetContent, SheetFooter, SheetHeader, SheetTitle, SheetTrigger } from "@/app/_components/ui/sheet";
 import { generateDayTimeList } from "@/app/_helpers/hours";
 import { Barbershop, Booking, Service } from "@prisma/client";
-import { format, setHours, setMinutes } from "date-fns";
+import { addDays, format, setHours, setMinutes } from "date-fns";
 import { ptBR } from "date-fns/locale";
 import { signIn, useSession } from "next-auth/react";
 import Image from "next/image";
@@ -167,7 +167,7 @@ const ServiceItem = ({ service, barbershop, isAuthenticated }: ServiceItemProps)
                     onSelect={handleDateClick}
                     className="flex justify-center mt-6"
                     locale={ptBR}
-                    fromDate={new Date()}
+                    fromDate={addDays(new Date(), 1)}
                   />
                   {/* modtrar lista de horarios apenas se houver data selecionada */}
                   {date && (
