@@ -27,8 +27,13 @@ export default async function Home() {
 // }) : []
 
   // em paralelo
-  const [ barbershops, confimedBookings ] = await Promise.all([
+  const [ barbershops, recomendedBarbershops, confimedBookings ] = await Promise.all([
     db.barbershop.findMany({}),
+    db.barbershop.findMany({
+      orderBy: {
+        id: 'asc'
+      }
+    }),
     session?.user
     ? db.booking.findMany({
         where: {
@@ -94,7 +99,7 @@ export default async function Home() {
         </h2>
 
         <div className="flex px-5 gap-4 overflow-x-auto [&::-webkit-scrollbar]:hidden">
-          {barbershops.map((barbershop) => (
+          {recomendedBarbershops.map((barbershop) => (
             <div key={barbershop.id} className="min-w-[167px] max-w-[167px]">
               <BarbershopItem key={barbershop.id} barbershop={barbershop} />
             </div>
